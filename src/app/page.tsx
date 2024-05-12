@@ -1,9 +1,11 @@
 import React from 'react'
-import JobCard from '@/components/JobCard'
+import JobCard2 from '@/components/JobCard2'
 import Image from 'next/image'
 import prisma from '@/lib/db/prisma'
 import { CreateJobSchema } from '@/lib/validation/jobs'
 import { auth } from '@clerk/nextjs'
+import { jobs } from './data'
+import { JobPosting } from "@/app/types"
 
 
 export default async function page({ searchParams }: any) {
@@ -91,7 +93,7 @@ export default async function page({ searchParams }: any) {
       {/* job listing */}
 
       <div className='grid grid-cols-3 gap-[30px] joblist'>
-        {
+        {/* {
           allJobs.map((job, index: number) => {
             return (
               <JobCard key={index} job={job} />
@@ -101,6 +103,16 @@ export default async function page({ searchParams }: any) {
         {
           allJobs?.length === 0 &&
           <p>No job entries</p>
+        } */}
+
+        {
+          jobs.map((job: JobPosting, index: number) => {
+            return (
+              <div key={index}>
+                <JobCard2 key={index} job={job} />
+              </div>
+            )
+          })
         }
 
       </div>
