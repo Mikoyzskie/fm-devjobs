@@ -92,7 +92,7 @@ export default async function page({ searchParams }: any) {
 
       {/* job listing */}
 
-      <div className='grid grid-cols-3 gap-[30px] joblist'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px] joblist'>
         {/* {
           allJobs.map((job, index: number) => {
             return (
@@ -108,7 +108,7 @@ export default async function page({ searchParams }: any) {
         {
           jobs.map((job: JobPosting, index: number) => {
             return (
-              <div key={index}>
+              <div key={index} className='h-full'>
                 <JobCard2 key={index} job={job} />
               </div>
             )
