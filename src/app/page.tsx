@@ -18,47 +18,6 @@ export default async function page({ searchParams }: any) {
     return Object.keys(searchParams).length === 0;
   }
 
-  const status = isEmpty()
-
-  const { userId } = auth()
-
-  let allJobs
-  if (userId && status) {
-    allJobs = await prisma.jobs.findMany({ where: { userId }, orderBy: { createdAt: 'desc' } })
-  } else {
-    if (!userId && status) {
-      allJobs = await prisma.jobs.findMany({ orderBy: { createdAt: 'desc' } })
-    }
-    else if (!userId && !status) {
-      allJobs = await prisma.jobs.findMany({
-        where: {
-          OR: [
-            {
-              country: {
-                contains: location,
-                mode: 'insensitive'
-              },
-              title: {
-                contains: job,
-                mode: 'insensitive'
-              }
-            }
-          ]
-        },
-        orderBy: {
-          createdAt: 'desc'
-        }
-      })
-    }
-    else {
-      allJobs = await prisma.jobs.findMany({ orderBy: { createdAt: 'desc' } })
-    }
-  }
-
-
-
-
-
   return (
     <div className='maxWidth -mt-[39px] relative z-10'>
       {/* filters */}
