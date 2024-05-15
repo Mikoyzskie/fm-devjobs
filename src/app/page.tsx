@@ -19,7 +19,7 @@ export default async function page({ searchParams }: any) {
   }
 
   return (
-    <div className='maxWidth -mt-[39px] relative z-10'>
+    <div className='maxWidth -mt-[39px] relative z-10 pb-[104px]'>
       {/* filters */}
 
       <form className='bg-white rounded-md shadow-md grid grid-cols-3 mb-[105px]'>

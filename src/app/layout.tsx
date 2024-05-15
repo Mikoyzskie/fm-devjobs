@@ -22,7 +22,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`${inter.className} `}>
-          <div className='bg-[#f2f2f2] min-h-screen pb-[56px]'>
+          <div className='bg-[#f2f2f2] min-h-screen'>
             <Header />
 
             {children}
