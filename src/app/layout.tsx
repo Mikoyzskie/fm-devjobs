@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Kumbh_Sans } from "next/font/google";
 import "./globals.css"
 import { Toaster } from "@/components/ui/toaster"
-import { ClerkProvider } from "@clerk/nextjs";
+
 import Header from '@/components/Header'
 import React from 'react'
 
@@ -19,17 +19,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={`${inter.className} `}>
-          <div className='bg-[#f2f2f2] min-h-screen'>
-            <Header />
 
-            {children}
-            <Toaster />
-          </div>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body className={`${inter.className} `}>
+        <div className='bg-[#f2f2f2] min-h-screen'>
+          <Header />
+
+          {children}
+          <Toaster />
+        </div>
+      </body>
+    </html>
   );
 }

@@ -1,9 +1,6 @@
 import React from 'react'
 import JobCard2 from '@/components/JobCard2'
 import Image from 'next/image'
-import prisma from '@/lib/db/prisma'
-import { CreateJobSchema } from '@/lib/validation/jobs'
-import { auth } from '@clerk/nextjs'
 import { jobs } from './data'
 import { JobPosting } from "@/app/types"
 

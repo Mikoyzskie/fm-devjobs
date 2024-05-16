@@ -2,17 +2,10 @@
 
 import React, { useState } from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
-import { useAuth } from "@clerk/nextjs";
-import { UserButton } from "@clerk/nextjs";
-import AddJobDialog from './AddEditJobDialog';
-import { Button } from './ui/button';
+
 
 export default function Header() {
 
-    const { isLoaded, userId, sessionId, getToken } = useAuth();
-
-    const [createEdit, setCreateEdit] = useState(false)
     return (
         <>
             <header className='relative '>
@@ -38,8 +31,6 @@ export default function Header() {
                 </div>
 
             </header>
-
-            {setCreateEdit && <AddJobDialog open={createEdit} setOpen={setCreateEdit} />}
         </>
 
     )
