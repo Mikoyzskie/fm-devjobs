@@ -46,20 +46,9 @@ export default async function page({ searchParams }: any) {
         </div>
       </form>
 
-      {/* job listing */}
 
       <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px] joblist'>
-        {/* {
-          allJobs.map((job, index: number) => {
-            return (
-              <JobCard key={index} job={job} />
-            )
-          })
-        }
-        {
-          allJobs?.length === 0 &&
-          <p>No job entries</p>
-        } */}
+
 
         {
           jobs.map((job: JobPosting, index: number) => {

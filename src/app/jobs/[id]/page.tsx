@@ -14,13 +14,14 @@ export default async function page({ params }: { params: { id: string } }) {
         notFound()
     }
 
+    const color = job.logoBackground
+
     return (
         <>
             <div className='max-w-[730px] w-full mx-auto -mt-[39px] relative z-10 mb-[80px]'>
                 <div className='w-full'>
-
                     <div className='flex bg-white w-full rounded-[6px] overflow-hidden shadow-md mb-8'>
-                        <div className='px-[30px] bg-black max-w-[140px] w-full'>
+                        <div className={`px-[30px] bg-[${color}] max-w-[140px] w-full`}>
                             <Image
                                 src={`.${job.logo}`}
                                 alt={job.company}
@@ -34,6 +35,11 @@ export default async function page({ params }: { params: { id: string } }) {
                                 <h2 className='font-bold text-2xl'>{job.company}</h2>
                                 <p className='text-[#6E8098]'>{job.company.toLowerCase()}.com</p>
                             </div>
+                            <Link href={`${job.website}`}>
+                                <button className='rounded-[5px] bg-[rgba(89,100,224,10%)] text-[#5964E0] font-bold px-5 py-4'>
+                                    Company Site
+                                </button>
+                            </Link>
                         </div>
                     </div>
                     <div className='bg-white w-full h-fit shadow-md rounded-[6px] p-12 flex flex-col gap-10'>
@@ -100,9 +106,9 @@ export default async function page({ params }: { params: { id: string } }) {
                         <h3 className='text-xl font-bold'>{job.position}</h3>
                         <p className='text-[#6E8098]'>{job.company}</p>
                     </div>
-                    <button>
-                        Apply Now
-                    </button>
+                    <Link href={job.apply}>
+                        <Button>Apply Now</Button>
+                    </Link>
                 </div>
 
             </footer>
