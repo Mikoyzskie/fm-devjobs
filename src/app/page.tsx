@@ -17,10 +17,8 @@ export default async function page({ searchParams }: any) {
 
   return (
     <div className='maxWidth -mt-[39px] relative z-10 pb-[104px]'>
-      {/* filters */}
-
-      <form className='bg-white rounded-md shadow-md grid grid-cols-3 mb-[105px]'>
-        <div className=' flex gap-4 py-7 px-8 '>
+      <form className='bg-white rounded-md shadow-md grid grid-cols-3 mb-[105px] auto-cols-max'>
+        <div className=' flex gap-4 py-7 px-8 max-w-[463px] w-full'>
           <Image
             src={'/desktop/icon-search.svg'}
             alt='seach icon'
