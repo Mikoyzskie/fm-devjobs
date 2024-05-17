@@ -42,10 +42,6 @@ export default function JobCard2({ job }: { job: JobPosting }) {
                     </div>
                     <div className='flex justify-between items-center'>
                         <h3 className='text-[#5964E0] font-bold'>{job.location}</h3>
-
-                        <Link href={`/jobs/${job.id}`}>
-                            <Button>Apply Now</Button>
-                        </Link>
                     </div>
 
                 </div>
