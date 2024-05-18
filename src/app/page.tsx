@@ -3,7 +3,7 @@ import JobCard2 from '@/components/JobCard2'
 import Image from 'next/image'
 import { jobs } from './data'
 import { JobPosting } from "@/app/types"
-
+import { Button } from '@/components/ui/button'
 
 export default async function page({ searchParams }: any) {
 
@@ -59,6 +59,12 @@ export default async function page({ searchParams }: any) {
         }
 
       </div>
+
+      <div className='flex items-center justify-center mt-14'>
+        <Button>Load More</Button>
+      </div>
+
     </div>
+
   )
 }
