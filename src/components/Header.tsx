@@ -1,6 +1,8 @@
+
+
 import Image from 'next/image'
 import Link from "next/link"
-import { Switch } from "@/components/ui/switch"
+import Switcher from './Switcher'
 
 export default function Header() {
 
@@ -31,7 +33,7 @@ export default function Header() {
                         height={20}
                         width={20}
                     />
-                    <Switch />
+                    <Switcher />
                     <Image
                         src={"/desktop/icon-moon.svg"}
                         alt='sun icon'
