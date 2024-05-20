@@ -2,21 +2,33 @@
 
 import { Switch } from "@/components/ui/switch"
 import { useEffect, useState } from "react"
+import { useTheme } from "next-themes"
 
 export default function Switcher() {
 
-    const [switcher, setSwitcher] = useState(false)
+    const { setTheme, resolvedTheme } = useTheme()
+    const [checked, setChecked] = useState(false)
 
     useEffect(() => {
-        if (switcher) {
-            console.log("dark");
+        if (resolvedTheme === 'dark') {
+            setChecked(true)
+        } else {
+            setChecked(false)
         }
 
-    }, [switcher])
+    }, [resolvedTheme])
+
+    function handleClick() {
+        if (resolvedTheme === 'dark') {
+            setTheme('light')
+        } else {
+            setTheme('dark')
+        }
+    }
 
     return (
         <>
-            <Switch checked={switcher} onClick={() => setSwitcher(!switcher)} />
+            <Switch checked={checked} onClick={handleClick} />
         </>
     )
 }

@@ -20,7 +20,7 @@ export default async function page({ params }: { params: { id: string } }) {
         <>
             <div className='max-w-[730px] w-full mx-auto -mt-[39px] relative z-10 mb-[80px]'>
                 <div className='w-full'>
-                    <div className='flex bg-white w-full rounded-[6px] overflow-hidden shadow-md mb-8'>
+                    <div className='flex bg-white dark:bg-[#19202D] w-full rounded-[6px] overflow-hidden shadow-md mb-8'>
                         <div className={`px-[30px] bg-[${color}] max-w-[140px] w-full`}>
                             <Image
                                 src={`.${job.logo}`}
@@ -42,7 +42,7 @@ export default async function page({ params }: { params: { id: string } }) {
                             </Link>
                         </div>
                     </div>
-                    <div className='bg-white w-full h-fit shadow-md rounded-[6px] p-12 flex flex-col gap-10'>
+                    <div className='bg-white dark:bg-[#19202D] w-full h-fit shadow-md rounded-[6px] p-12 flex flex-col gap-10'>
                         <div className='flex items-center justify-between gap-5'>
                             <div>
                                 <p className='text-[#6E8098]'>{job.postedAt}&nbsp; ● &nbsp;{job.contract}</p>
@@ -100,7 +100,7 @@ export default async function page({ params }: { params: { id: string } }) {
 
                 </div>
             </div>
-            <footer className='bg-white py-[23px] w-full relative bottom-0'>
+            <footer className='bg-white dark:bg-[#19202D] py-[23px] w-full relative bottom-0'>
                 <div className='max-w-[730px] w-full mx-auto flex justify-between items-center'>
                     <div className='flex flex-col'>
                         <h3 className='text-xl font-bold'>{job.position}</h3>

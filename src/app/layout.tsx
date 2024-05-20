@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Kumbh_Sans } from "next/font/google";
 import "./globals.css"
 import { Toaster } from "@/components/ui/toaster"
-
+import { ThemeProvider } from "@/lib/theme-provider"
 import Header from '@/components/Header'
 import React from 'react'
 
@@ -20,15 +20,26 @@ export default function RootLayout({
 }>) {
   return (
 
-    <html lang="en">
-      <body className={`${inter.className} `}>
-        <div className='bg-[#f2f2f2] min-h-screen'>
-          <Header />
 
-          {children}
-          <Toaster />
-        </div>
+    <html lang="en">
+
+      <body className={`${inter.className} `}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className='bg-[#f2f2f2] dark:bg-[#121721] min-h-screen'>
+            <Header />
+            {children}
+            <Toaster />
+          </div>
+
+        </ThemeProvider>
       </body>
+
     </html>
+
   );
 }
