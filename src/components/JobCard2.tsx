@@ -9,7 +9,7 @@ export default function JobCard2({ job }: { job: JobPosting }) {
     return (
         <Link href={`/jobs/${job.id}`}>
             <div className='bg-white dark:bg-[#19202D] relative rounded-md h-full'>
-                <div className={`bg-primary p-[13px] h-[50px] w-[50px] flex items-center justify-center absolute -top-[25px] left-8 rounded-[15px] overflow-hidden z-10`}>
+                <div className={`${job.logoBackground} p-[13px] h-[50px] w-[50px] flex items-center justify-center absolute -top-[25px] left-8 rounded-[15px] overflow-hidden z-10`}>
                     <Image
                         src={`${job.logo}`}
                         alt={job.company}

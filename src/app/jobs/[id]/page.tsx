@@ -14,14 +14,12 @@ export default async function page({ params }: { params: { id: string } }) {
         notFound()
     }
 
-    const color = job.logoBackground
-
     return (
         <>
             <div className='max-w-[730px] w-full mx-auto -mt-[39px] relative z-10 mb-[80px]'>
                 <div className='w-full'>
                     <div className='flex bg-white dark:bg-[#19202D] w-full rounded-[6px] overflow-hidden shadow-md mb-8'>
-                        <div className={`px-[30px] bg-[${color}] max-w-[140px] w-full`}>
+                        <div className={`px-[30px] ${job.logoBackground} max-w-[140px] w-full`}>
                             <Image
                                 src={`.${job.logo}`}
                                 alt={job.company}
