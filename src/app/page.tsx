@@ -1,19 +1,8 @@
-import React from 'react'
-import JobCard2 from '@/components/JobCard2'
 import Image from 'next/image'
-import { jobs } from './data'
-import { JobPosting } from "@/app/types"
-import { Button } from '@/components/ui/button'
+import Jobs from '@/components/Jobs'
 
-export default async function page({ searchParams }: any) {
+export default function page() {
 
-  // console.log(searchParams);
-  const location = searchParams.location
-  const job = searchParams.job
-
-  function isEmpty() {
-    return Object.keys(searchParams).length === 0;
-  }
 
   return (
     <div className='maxWidth -mt-[39px] relative z-10 pb-[104px]'>
@@ -45,24 +34,7 @@ export default async function page({ searchParams }: any) {
       </form>
 
 
-      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[30px] joblist'>
-
-
-        {
-          jobs.map((job: JobPosting, index: number) => {
-            return (
-              <div key={index} className='h-full'>
-                <JobCard2 key={index} job={job} />
-              </div>
-            )
-          })
-        }
-
-      </div>
-
-      <div className='flex items-center justify-center mt-14'>
-        <Button>Load More</Button>
-      </div>
+      <Jobs />
 
     </div>
 

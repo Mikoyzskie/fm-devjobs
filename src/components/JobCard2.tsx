@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button } from './ui/button'
 import { JobPosting } from '@/app/types'
 
 export default function JobCard2({ job }: { job: JobPosting }) {
@@ -17,7 +16,6 @@ export default function JobCard2({ job }: { job: JobPosting }) {
                         height={50}
                         className={`h-auto w-full object-contain `}
                     />
-
                 </div>
                 <div className='px-8 h-full pt-[49px] pb-8 flex flex-col justify-between gap-[44px]'>
                     <div className='flex flex-col gap-3'>
@@ -28,20 +26,16 @@ export default function JobCard2({ job }: { job: JobPosting }) {
                                     <svg width="4" height="4" viewBox="0 0 4 4" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <circle cx="2" cy="2" r="2" fill="#6E8098" />
                                     </svg>
-
                                 </p>
                                 <p>{job.contract}</p>
                             </div>
-
                         </div>
-
                         <h1 className='font-bold text-[#19202D] dark:text-white text-xl'>{job.position}</h1>
                         <p className='text-[#6E8098]'>{job.company}</p>
                     </div>
                     <div className='flex justify-between items-center'>
                         <h3 className='text-[#5964E0] font-bold'>{job.location}</h3>
                     </div>
-
                 </div>
             </div>
         </Link>
