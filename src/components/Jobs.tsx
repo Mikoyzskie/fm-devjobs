@@ -18,7 +18,7 @@ export default function Jobs() {
 
     return (
         <>
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[65px] joblist'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-[30px] gap-y-[49px] sm:gap-y-[65px] sm:gap-x-[11px] joblist'>
                 {
                     jobs.slice(0, limiter).map((job: JobPosting, index: number) => {
                         return (

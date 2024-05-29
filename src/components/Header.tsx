@@ -13,7 +13,14 @@ export default function Header() {
                 alt='header pattern'
                 height={160}
                 width={1440}
-                className='w-full max-h-[162px] z-10'
+                className='w-full h-[162px] z-10 sm:block hidden'
+            />
+            <Image
+                src={'/mobile/bg-pattern-header.svg'}
+                alt='header pattern'
+                height={136}
+                width={375}
+                className='w-full h-full sm:hidden block'
             />
 
             <div className='absolute maxWidth inset-0 flex justify-between items-center'>
