@@ -23,7 +23,7 @@ export default function Header() {
                 className='w-full h-full sm:hidden block'
             />
 
-            <div className='absolute maxWidth inset-0 flex justify-between items-center'>
+            <div className='absolute maxWidth inset-0 flex justify-between items-center mb-[72px] md:mb-0'>
                 <Link href={"/"} className='hover:cursor-pointer'>
                     <Image
                         src={"/desktop/logo.svg"}
