@@ -27,7 +27,7 @@ export default async function page({ params }: { params: { id: string } }) {
                                 height={200}
                                 className='h-full  w-full object-contain md:block hidden'
                             />
-                            <div className={`${job.logoBackground} p-[13px] h-[50px] w-[50px] flex items-center justify-center absolute -top-[25px] left-1/2 -translate-x-1/2 rounded-[15px] overflow-hidden z-10`}>
+                            <div className={`${job.logoBackground} p-[13px] h-[50px] w-[50px]  items-center justify-center absolute -top-[25px] left-1/2 -translate-x-1/2 rounded-[15px] overflow-hidden z-10 md:hidden flex`}>
                                 <Image
                                     src={`.${job.logo}`}
                                     alt={job.company}

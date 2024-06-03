@@ -17,8 +17,8 @@ export default function page() {
             className='object-contain'
           />
 
-          <input name='job' type="text" placeholder='Filter by title, companies, expertise' className='outline-none w-full bg-white dark:bg-[#19202D] hidden lg:block' />
-          <input name='job' type="text" placeholder='Filter by title' className='outline-none w-full bg-white dark:bg-[#19202D] lg:hidden block' />
+          <input name='title' type="text" placeholder='Filter by title, companies, expertise' className='outline-none w-full bg-white dark:bg-[#19202D]' />
+          {/* <input name='title' type="text" placeholder='Filter by title' className='outline-none w-full bg-white dark:bg-[#19202D] lg:hidden block' /> */}
 
         </div>
         <div className='md:flex gap-4 py-7 px-6 xl:px-8 border-r border-[rgba(110,128,152,20%)] max-w-[213px] lg:max-w-[300px] w-full hidden'>
