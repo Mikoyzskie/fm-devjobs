@@ -2,7 +2,9 @@ import Image from 'next/image'
 import Jobs from '@/components/Jobs'
 import { Checkbox } from "@/components/ui/checkbox"
 
-export default function page() {
+export default function page({ searchParams }: any) {
+
+  // console.log(searchParams);
 
 
   return (
@@ -34,7 +36,7 @@ export default function page() {
         </div>
         <div className='md:flex items-center justify-between p-4 w-full hidden'>
           <div className='flex gap-[14px] items-center ml-0 lg:ml-4'>
-            <Checkbox id="isFulltime" />
+            <Checkbox id="isFulltime" value={"true"} name='false' />
             <label htmlFor="isFulltime" className='font-bold lg:block hidden text-nowrap'>Full Time Only</label>
             <label htmlFor="isFulltime" className='font-bold lg:hidden block'>Full Time</label>
           </div>
@@ -43,7 +45,7 @@ export default function page() {
       </form>
 
 
-      <Jobs />
+      <Jobs title={searchParams.title} />
 
     </div>
 
