@@ -1,11 +1,9 @@
 import Image from 'next/image'
 import Jobs from '@/components/Jobs'
 import { Checkbox } from "@/components/ui/checkbox"
+import { Suspense } from 'react'
 
-export default function page({ searchParams }: any) {
-
-  // console.log(searchParams);
-
+export default function page() {
 
   return (
     <div className='maxWidth -mt-[39px] relative z-10 pb-[104px]'>
@@ -44,8 +42,9 @@ export default function page({ searchParams }: any) {
         </div>
       </form>
 
-
-      <Jobs />
+      <Suspense>
+        <Jobs />
+      </Suspense>
 
     </div>
 
