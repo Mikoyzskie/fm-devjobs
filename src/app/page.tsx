@@ -36,7 +36,7 @@ export default function page({ searchParams }: any) {
         </div>
         <div className='md:flex items-center justify-between p-4 w-full hidden'>
           <div className='flex gap-[14px] items-center ml-0 lg:ml-4'>
-            <Checkbox id="isFulltime" value={"true"} name='false' />
+            <Checkbox id="isFulltime" value={"true"} name='fulltime' />
             <label htmlFor="isFulltime" className='font-bold lg:block hidden text-nowrap'>Full Time Only</label>
             <label htmlFor="isFulltime" className='font-bold lg:hidden block'>Full Time</label>
           </div>
@@ -45,7 +45,7 @@ export default function page({ searchParams }: any) {
       </form>
 
 
-      <Jobs title={searchParams.title} />
+      <Jobs />
 
     </div>
 
